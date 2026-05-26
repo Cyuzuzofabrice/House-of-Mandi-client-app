@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function Contact() {
 
-  const whatsappNumber = "250786675051" // change to your real number
+  const whatsappNumber = "250786675051"
 
   const [form, setForm] = useState({
     name: "",
@@ -17,7 +17,13 @@ export default function Contact() {
   }
 
   const sendWhatsApp = () => {
-    const text = `Hello House of Mandi,
+
+    if (!form.name || !form.message) {
+      alert("Please fill in all fields")
+      return
+    }
+
+    const text = `Hello House of Mandi 👋
 Name: ${form.name}
 Message: ${form.message}`
 
@@ -26,11 +32,11 @@ Message: ${form.message}`
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 py-10 sm:py-16">
 
-      <div className="bg-white p-6 rounded-xl shadow w-full max-w-md">
+      <div className="bg-white p-5 sm:p-6 rounded-xl shadow-lg w-full max-w-sm sm:max-w-md">
 
-        <h1 className="text-2xl font-bold text-center mb-4">
+        <h1 className="text-xl sm:text-2xl font-bold text-center mb-4 sm:mb-6">
           Contact Us
         </h1>
 
@@ -41,7 +47,7 @@ Message: ${form.message}`
           placeholder="Your Name"
           value={form.name}
           onChange={handleChange}
-          className="w-full p-3 border rounded-lg mb-3"
+          className="w-full p-3 border rounded-lg mb-3 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-green-500"
         />
 
         {/* Message */}
@@ -50,20 +56,20 @@ Message: ${form.message}`
           placeholder="Your Message"
           value={form.message}
           onChange={handleChange}
-          className="w-full p-3 border rounded-lg mb-3"
           rows="4"
+          className="w-full p-3 border rounded-lg mb-4 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-green-500"
         />
 
         {/* Button */}
         <button
           onClick={sendWhatsApp}
-          className="w-full bg-green-600 text-white py-3 rounded-lg font-bold"
+          className="w-full bg-green-600 text-white py-3 rounded-lg font-bold text-sm sm:text-base hover:bg-green-700 active:scale-95 transition"
         >
           Send via WhatsApp
         </button>
 
         {/* Info */}
-        <p className="text-center text-gray-500 mt-4 text-sm">
+        <p className="text-center text-gray-500 mt-4 text-xs sm:text-sm">
           We reply fast on WhatsApp 📱
         </p>
 

@@ -7,20 +7,22 @@ const images = [
 
 export default function GallerySection() {
   return (
-    <section className="py-24 bg-white px-6">
+    <section className="py-14 sm:py-20 lg:py-24 bg-white px-4 sm:px-6">
 
-      <h2 className="text-5xl font-bold text-center mb-14">
-        Restaurant Gallery 
+      {/* Title */}
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-10 sm:mb-14">
+        Restaurant Gallery
       </h2>
 
-      <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
 
         {images.map((image, index) => (
           <img
             key={index}
             src={image}
             alt="gallery"
-            className="rounded-3xl h-80 w-full object-cover hover:scale-105 transition"
+            className="rounded-2xl sm:rounded-3xl h-60 sm:h-72 lg:h-80 w-full object-cover hover:scale-105 active:scale-95 transition duration-300"
           />
         ))}
 
