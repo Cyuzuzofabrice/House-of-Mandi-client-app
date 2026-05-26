@@ -9,7 +9,7 @@ export default function Navbar() {
 
       {/* Logo */}
       <h1 className="text-xl sm:text-2xl font-bold text-yellow-500">
-        House of Mandi Yemeni Restaurant
+        House of Mandi 
       </h1>
 
       {/* Desktop Menu */}

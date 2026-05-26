@@ -16,12 +16,12 @@ export default function Footer() {
 
         {/* Location */}
         <p className="text-gray-300 text-sm sm:text-lg">
-          📍 KN 81 St, Kigali, Rwanda
+           KN 81 St, Kigali, Rwanda
         </p>
 
         {/* Opening Hours */}
         <p className="text-gray-300 text-sm sm:text-lg mt-2">
-          🕒 Open Daily: 09:00 AM — 11:30 PM
+          Open Daily: 09:00 AM — 11:30 PM
         </p>
 
         {/* Copyright */}
