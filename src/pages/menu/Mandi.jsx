@@ -24,7 +24,7 @@ const mandiItems = [
 
 export default function Mandi() {
 
-  const phone = "250798842328"
+  const phone = "250786675051"
 
   const orderNow = (item) => {
     const message =
